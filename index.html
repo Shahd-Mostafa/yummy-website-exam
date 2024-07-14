@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo.png" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <title>Yummy</title>
+  </head>
+  <body>
+    <div
+      class="loader-screen justify-content-center align-items-center position-fixed top-0 bottom-0 start-0 end-0"
+    >
+      <i class="fa fa-spinner fa-spin fa-5x"></i>
+    </div>
+    <div class="side-menu position-fixed top-0 d-flex min-vh-100">
+      <div
+        class="side-black d-flex justify-content-between flex-column p-4 min-vh-100 text-white"
+      >
+        <div class="items">
+          <ul class="list-unstyled overflow-hidden">
+            <li
+              class="position-relative py-2"
+              onclick="displaySearchResult();CloseMenu()"
+            >
+              Search
+            </li>
+            <li
+              class="position-relative py-2"
+              onclick="getCategories();CloseMenu()"
+            >
+              Categories
+            </li>
+            <li
+              class="position-relative py-2"
+              onclick=" getCuisine();CloseMenu() "
+            >
+              Area
+            </li>
+            <li
+              class="position-relative py-2"
+              onclick="getIngredients();CloseMenu()"
+            >
+              Ingredients
+            </li>
+            <li
+              class="position-relative py-2"
+              onclick="displayContacts();CloseMenu()"
+            >
+              Contact Us
+            </li>
+          </ul>
+        </div>
+        <div class="side-black-footer">
+          <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <div class="text-footer">
+            <p>
+              Copyright Â© 2019 All Rights <br />
+              Reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="side-white bg-white d-flex flex-column justify-content-between align-items-center py-4 px-2 text-center min-vh-100"
+      >
+        <img src="images/logo.png" alt="yummy logo" />
+        <i class="fa-solid fa-2x fa-align-justify open-close-bars"></i>
+        <div class="side-white-footer">
+          <i class="fa-solid fa-globe d-block"></i>
+          <i class="fa-solid fa-share-nodes"></i>
+        </div>
+      </div>
+    </div>
+    <main>
+      <div class="container w-75">
+        <div class="row py-4" id="searchBox"></div>
+      </div>
+      <section class="min-vh-100 position-relative">
+        <div
+          class="second-loading justify-content-center align-items-center top-0 bottom-0 start-0 end-0"
+        >
+          <i class="fa fa-spinner fa-spin fa-5x"></i>
+        </div>
+        <div class="container">
+          <div class="row py-5 g-4" id="recipeMenu"></div>
+        </div>
+        <div class="container">
+          <div class="row py-5 g-4" id="recipeDetails"></div>
+        </div>
+      </section>
+    </main>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
